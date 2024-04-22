@@ -1,0 +1,33 @@
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 204px;
+  }
+  
+  .chart-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust margin between rows */
+  }
+  
+  .chart {
+    flex: 1;
+    margin-right: 122px; /* Adjust margin between charts */
+  }
+  
+  .chart:last-child {
+    margin-right: 0; /* Remove margin for the last chart in each row */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .charts-container {
+      margin-left: 0;
+      flex-direction: column;
+    }
+    
+    .chart {
+      flex: 0 0 100%;
+      margin-right: 0;
+    }
+  }
+  

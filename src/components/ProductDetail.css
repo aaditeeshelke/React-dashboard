@@ -1,0 +1,67 @@
+/* Define custom CSS styles for the product detail page */
+.container .product {
+    margin-top: 16px;
+    text-align: center;
+    width: 163px;
+    margin-left: 289px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items along the main axis with space between */
+    gap: 25px; /* Add gap between grid items */
+    width: 371%;
+    margin-left: -96px;
+}
+
+
+.product-card {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width for three products in one row with gap */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow content */
+    transition: box-shadow 0.3s ease; /* Add transition effect for box shadow */
+}
+
+.product-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure image is displayed as a block element */
+    border-bottom: 1px solid #ddd; /* Add border at the bottom of the image */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Increase font size of product name */
+}
+
+.product-info p {
+    margin: 10px 0 0; /* Adjust margin for description */
+    font-size: 1rem; /* Set font size of description */
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .product-grid {
+        width: 100%; /* Adjust width to 100% for smaller screens */
+    }
+
+    .product-card {
+        flex: 0 0 calc(50% - 20px); /* Adjust width for two products in one row with gap */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-card {
+        flex: 0 0 100%; /* Set width to 100% for single product in one row */
+    }
+}
